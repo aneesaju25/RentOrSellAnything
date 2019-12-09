@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".HomeActivity">
+
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_post_ad_24dp"
+            android:contentDescription="FAB"
+            android:background="#FFFFFF"
+            app:layout_anchor="@id/bottomappbar"></com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/bottomappbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom"
+            android:background="@drawable/custom_background_bottom_drawer"
+            app:backgroundTint="@color/coloricon"
+            app:fabCradleVerticalOffset="0dp"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="?android:attr/borderlessButtonStyle"
+                    android:id="@+id/bottombarfind"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:drawableTop="@drawable/ic_search_white_24dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:text="FIND"
+                    android:textColor="#FFFFFF"
+                    android:clickable="true"/>
+                <TextView
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:drawableTop="@drawable/ic_search_white_24dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:textColor="#FFFFFF"
+                    android:visibility="invisible" />
+                <TextView
+                    style="?android:attr/borderlessButtonStyle"
+                    android:id="@+id/bottombarmyprofile"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:drawableTop="@drawable/ic_profile_white_24dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:text="PROFILE"
+                    android:textColor="#FFFFFF"
+                    android:clickable="true"/>
+            </LinearLayout>
+        </com.google.android.material.bottomappbar.BottomAppBar>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+        <!--<SearchView-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="10dp"-->
+    <!--android:layout_width="match_parent" />-->
+
+    <!--<com.google.android.material.tabs.TabLayout-->
+    <!--android:id="@+id/tablayout"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="60dp"-->
+    <!--android:layout_width="match_parent">-->
+
+    <!--<com.google.android.material.tabs.TabItem-->
+    <!--    android:layout_height="wrap_content"-->
+    <!--    android:layout_width="wrap_content"-->
+    <!--    android:text="@string/activity_home_tablayout_tab1" />-->
+
+    <!--<com.google.android.material.tabs.TabItem-->
+    <!--    android:layout_height="wrap_content"-->
+    <!--    android:layout_width="wrap_content"-->
+    <!--    android:text="@string/activity_home_tablayout_tab2" />-->
+
+    <!--<com.google.android.material.tabs.TabItem-->
+    <!--    android:layout_height="wrap_content"-->
+    <!--    android:layout_width="wrap_content"-->
+    <!--    android:text="@string/activity_home_tablayout_tab3" />-->
+    <!--</com.google.android.material.tabs.TabLayout>-->

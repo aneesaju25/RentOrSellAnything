@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">RentOrSellAnything</string>
+
+    <string name="activity_login_label_email">Email</string>
+    <string name="activity_login_label_password">Password</string>
+    <string name="activity_login_button_login">Sign In</string>
+    <string name="activity_login_label_new_user">New User?</string>
+    <string name="activity_login_label_signup">Signup</string>
+    <string name="activity_login_edittext_username">Username or Email</string>
+    <string name="activity_login_edittext_password">Password</string>
+
+    <string name="activity_register_label_registrationActivity">Fill All the Fields</string>
+    <string name="activity_register_button_register">Register</string>
+    <string name="activity_register_label_registreduser">Already registered?</string>
+    <string name="activity_register_label_signin">Signin</string>
+    <string name="activity_register_label_name">Name</string>
+    <string name="activity_register_label_username">UserName</string>
+    <string name="activity_register_label_email">Email</string>
+    <string name="activity_register_label_password">Password</string>
+    <string name="activity_register_label_mobileNumber">Mobile Number</string>
+    <string name="activity_register_label_address">Address</string>
+
+    <string name="activity_home_search_queryhint">Search Here</string>
+    <string name="activity_home_tablayout_tab1">Find</string>
+    <string name="activity_home_tablayout_tab2">Post</string>
+    <string name="activity_home_tablayout_tab3">My Profile</string>
+
+    <string name="activity_postanitem_label_itemname">Item Name</string>
+    <string name="activity_postanitem_label_itemdscrpt">Description</string>
+    <string name="activity_postanitem_label_itemsellorrent">Choose Sell/Rent </string>
+    <string name="activity_postanitem_label_itemprice">Set Price</string>
+    <string name="activity_postanitem_label_itemimg">Add Image</string>
+    <string name="activity_postanitem_imgbutton_img">Add</string>
+    <string name="activity_postanitem_button_post">Post</string>
+    <string name="activity_postanitem_label_posteditems">My Posts</string>
+
+    <string name="activity_findanitem_label_category">Select Category</string>
+    <string name="activity_findanitem_label_subcategory">Sub Category</string>
+
+    <string-array name="Vehicles">
+        <item>Cars</item>
+        <item>Bikes</item>
+    </string-array>
+</resources>
