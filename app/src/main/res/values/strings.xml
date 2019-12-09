@@ -37,6 +37,8 @@
     <string name="activity_findanitem_label_category">Select Category</string>
     <string name="activity_findanitem_label_subcategory">Sub Category</string>
 
+    <string name="activity_searchResults_label_search">Search Results</string>
+
     <string-array name="Vehicles">
         <item>Cars</item>
         <item>Bikes</item>
