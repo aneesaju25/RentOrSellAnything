@@ -6,6 +6,7 @@ import retrofit2.http.POST;
 
 public interface APIService {
 
+    //API calls
    /* @POST("Register")
     Call<RegisterResponse> register(@Body RegisterRequest registerRequest);
 
