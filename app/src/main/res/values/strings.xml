@@ -29,10 +29,11 @@
     <string name="activity_postanitem_label_itemdscrpt">Description</string>
     <string name="activity_postanitem_label_itemsellorrent">Choose Sell/Rent </string>
     <string name="activity_postanitem_label_itemprice">Set Price</string>
-    <string name="activity_postanitem_label_itemimg">Add Image</string>
+    <string name="activity_postanitem_label_itemimg">Upload Image</string>
     <string name="activity_postanitem_imgbutton_img">Add</string>
     <string name="activity_postanitem_button_post">Post</string>
     <string name="activity_postanitem_label_posteditems">My Posts</string>
+
 
     <string name="activity_findanitem_label_category">Select Category</string>
     <string name="activity_findanitem_label_subcategory">Sub Category</string>

@@ -36,7 +36,13 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
     public void onBindViewHolder(ViewHolder holder, int position) {
         String data = mData.get(position);
         holder.myTextView.setText(data);
-
+        holder.cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentBlock = new Intent(v.getContext(), DisplayAnItemActivity.class);
+                v.getContext().startActivity(intentBlock);
+            }
+        });
     }
 
     // total number of rows

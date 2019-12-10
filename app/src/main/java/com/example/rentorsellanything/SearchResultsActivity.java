@@ -3,8 +3,12 @@ package com.example.rentorsellanything;
 import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -21,11 +25,11 @@ import java.util.List;
 public class SearchResultsActivity extends AppCompatActivity {
 
     MyRecyclerViewAdapter adapter;
+
     public void onCreate(@Nullable Bundle x) {
         super.onCreate(x);
         setContentView(R.layout.activity_searchresults);
 
-// data to populate the RecyclerView with
         ArrayList<String> values = new ArrayList<>();
         values.add("Data1");
         values.add("Data2");
@@ -41,7 +45,5 @@ public class SearchResultsActivity extends AppCompatActivity {
         recyclerView.addItemDecoration(new DividerItemDecoration(recyclerView.getContext(), DividerItemDecoration.VERTICAL));
         //adapter.setClickListener(this);
         recyclerView.setAdapter(adapter);
-
     }
-
 }
