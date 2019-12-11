@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -16,46 +14,28 @@
             android:layout_marginTop="10dp">
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_supervisor_account_black_24dp"/>
+                    android:src="@drawable/ic_profile_white_24dp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="UserName"/>
 
             </LinearLayout>
+            <ImageButton
+                android:id="@+id/btnHomeImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="280dp"
+                android:src="@drawable/ic_home_black_24dp"
+                android:onClick="processHomeBtnClick"/>
+
         </LinearLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="* Edit My Profile"
-            android:layout_marginTop="20dp"
-            android:padding="20dp"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="* My Posts"
-            android:layout_marginTop="20dp"
-            android:padding="20dp" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="* Wishlist"
-            android:layout_marginTop="20dp"
-            android:padding="20dp"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="* LogOut"
-            android:layout_marginTop="20dp"
-            android:padding="20dp"/>
-    </LinearLayout>
-
-    </LinearLayout>
+</LinearLayout>

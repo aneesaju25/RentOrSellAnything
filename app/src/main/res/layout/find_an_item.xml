@@ -3,50 +3,42 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="20dp"
-        android:text="@string/activity_findanitem_label_category"
-        android:textSize="20dp"
-        android:textColor="@color/coloricon"/>
+
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="50dp">
+        android:layout_height="200dp"
+        android:orientation="vertical"
+        android:background="@color/coloricon">
 
-        <ImageButton
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/FurnitureButton"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"
-            android:src="@drawable/ic_home_black_24dp"
-            android:layout_marginTop="50dp"
-            android:layout_marginStart="60dp"/>
-
-        <ImageButton
-            android:layout_width="wrap_content"
+            android:text="Wish to Buy something? 'Choose from listed Categories'"
+            android:textStyle="italic"
+            android:layout_marginStart="20dp"/>
+        <Button
+            android:id="@+id/HomeButton"
+            android:layout_width="130dp"
             android:layout_height="wrap_content"
-            android:id="@+id/VehicleButton"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"
-            android:src="@drawable/ic_drive_eta_black_24dp"
-            android:layout_marginTop="50dp"
-            android:layout_marginStart="60dp"/>
-
-        <ImageButton
-            android:layout_width="wrap_content"
+            android:drawableStart="@drawable/ic_home_black_24dp"
+            android:text="Furniture"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="130dp"/>
+        <Button
+            android:id="@+id/VehiclesButton"
+            android:layout_width="130dp"
             android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_drive_eta_black_24dp"
+            android:text="Vehicles"
+            android:layout_marginStart="130dp"/>
+        <Button
             android:id="@+id/FashionButton"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"
-            android:src="@drawable/ic_supervisor_account_black_24dp"
-            android:layout_marginTop="50dp"
-            android:layout_marginStart="60dp"/>
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_supervisor_account_black_24dp"
+            android:text="Fashion"
+            android:layout_marginStart="130dp"/>
 
     </LinearLayout>
 
@@ -54,16 +46,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="255dp">
+        android:layout_marginTop="255dp"
+        android:padding="20dp">
 
-        <TextView
-            android:id="@+id/findlist"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/activity_findanitem_label_subcategory"
-            android:textSize="15dp"
-            android:layout_marginLeft="20dp"
-            android:textColor="@color/coloricon"/>
         <ListView
             android:id="@+id/listview"
             android:layout_width="match_parent"

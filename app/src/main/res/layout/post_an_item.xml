@@ -20,18 +20,22 @@
         android:orientation="vertical">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+
+            <ImageButton
+                android:id="@+id/uploadItemImgBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_post_ad_24dp"
+                android:layout_marginStart="20dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/activity_postanitem_label_itemimg"
                 android:textColor="@color/coloricon" />
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="30dp"
-                android:layout_marginStart="120dp"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -65,11 +69,27 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="@string/activity_postanitem_label_chooseCategory"
+                android:textColor="@color/coloricon" />
+            <Spinner
+                android:id="@+id/spinnerCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/Categories"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="@string/activity_postanitem_label_itemsellorrent"
                 android:textColor="@color/coloricon" />
             <Spinner
+                android:id="@+id/spinnerSellOrRent"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:entries="@array/userOptions"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -80,9 +100,9 @@
                 android:text="Rent Period"
                 android:textColor="@color/coloricon" />
             <EditText
+                android:id="@+id/etduration"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="number"/>
+                android:layout_height="wrap_content"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"

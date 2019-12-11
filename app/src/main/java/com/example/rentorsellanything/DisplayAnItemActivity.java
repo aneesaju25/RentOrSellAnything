@@ -21,4 +21,9 @@ public class DisplayAnItemActivity extends AppCompatActivity {
         Intent intent= new Intent(this, MyActivity.class);
         startActivity(intent);
     }
+    public void processUserProfileClick(View view)
+    {
+        Intent intent= new Intent(this, UserProfileActivity.class);
+        startActivity(intent);
+    }
 }
