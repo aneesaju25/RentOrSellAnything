@@ -2,50 +2,49 @@ package com.example.rentorsellanything.pojo;
 
 public class RegisterRequest {
 
-    String U_Name;
-    String U_password;
-    String U_email_id;
-    String Mob_no;
-    String Address;
+    private String username;
+    private String password;
+    private String email;
+    private String mobile;
+    private String address;
 
-    public String getU_Name() {
-        return U_Name;
+    public String getUsername() {
+        return username;
     }
 
-    public void setU_Name(String u_Name) {
-        U_Name = u_Name;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
-    public String getU_password() {
-        return U_password;
+    public String getPassword() {
+        return password;
     }
 
-    public void setU_password(String u_password) {
-        U_password = u_password;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
-    public String getU_email_id() {
-        return U_email_id;
+    public String getEmail() {
+        return email;
     }
 
-    public void setU_email_id(String u_email_id) {
-        U_email_id = u_email_id;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public String getMob_no() {
-        return Mob_no;
+    public String getMobile() {
+        return mobile;
     }
 
-    public void setMob_no(String mob_no) {
-        Mob_no = mob_no;
+    public void setMobile(String mobile) {
+        this.mobile = mobile;
     }
 
     public String getAddress() {
-        return Address;
+        return address;
     }
 
     public void setAddress(String address) {
-        Address = address;
+        this.address = address;
     }
-
 }

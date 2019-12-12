@@ -49,10 +49,10 @@ public class RegistrationActivity extends AppCompatActivity {
                 String address = etAddress.getText().toString();
 
                 RegisterRequest registerRequest = new RegisterRequest();
-                registerRequest.setU_Name(username);
-                registerRequest.setU_password(password);
-                registerRequest.setU_email_id(email);
-                registerRequest.setMob_no(mobile);
+                registerRequest.setUsername(username);
+                registerRequest.setPassword(password);
+                registerRequest.setEmail(email);
+                registerRequest.setMobile(mobile);
                 registerRequest.setAddress(address);
 
                 Retrofit retrofit = new Retrofit.Builder()
@@ -61,7 +61,6 @@ public class RegistrationActivity extends AppCompatActivity {
                         .build();
 
                 APIService service = retrofit.create(APIService.class);
-
                 Call<RegisterResponse> registerResponse = service.register(registerRequest);
                 registerResponse.enqueue(new Callback<RegisterResponse>() {
                     @Override
@@ -70,6 +69,7 @@ public class RegistrationActivity extends AppCompatActivity {
                         if (response.body() != null && response.body().getStatus()) {
                             Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
                             startActivity(intent);
+                            finish();
                         }
                     }
 

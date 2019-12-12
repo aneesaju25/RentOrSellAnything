@@ -26,6 +26,8 @@
             </LinearLayout>
         </LinearLayout>
 
+
+
         <TextView
             android:id="@+id/tvEditProfile"
             android:layout_width="wrap_content"
@@ -61,7 +63,19 @@
         android:background="@color/colorLight"
         android:visibility="gone"
         android:padding="20dp">
-        
+
+            <ImageButton
+                android:id="@+id/uploadUserImgBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_post_ad_24dp"
+                android:layout_marginStart="20dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/activity_myProfile_label_Userimg"
+                android:textColor="@color/coloricon" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

@@ -21,17 +21,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class FindAnItem extends Fragment {
-
-
-    String[] values = new String[] { "Sofa",
-            "Chair",
-            "Table",
-            "Bed",
-            "Kids Furniture",
-            "Home Decor"
-    };
 
 
     public void FindAnItem() {
@@ -48,17 +40,8 @@ public class FindAnItem extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         final View rootView = inflater.inflate(R.layout.find_an_item, container, false);
-        //now you must initialize your list view
-        final ListView yourListView = (ListView)rootView.findViewById(R.id.listview);
 
-        yourListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Object o = yourListView.getItemAtPosition(position);
-                Intent intentBlock = new Intent(view.getContext(), SearchResultsActivity.class);
-                startActivity(intentBlock);
-            }
-        });
+        final ListView yourListView = (ListView)rootView.findViewById(R.id.listview);
 
         Button imageButton = (Button)rootView.findViewById(R.id.VehiclesButton);
         imageButton.setOnClickListener(new View.OnClickListener() {
@@ -81,6 +64,15 @@ public class FindAnItem extends Fragment {
                 yourListView.setAdapter(new PasswordAdapter(getActivity(),R.layout.list_item,getResources().getStringArray(R.array.Furniture)));
             }
         });
+
+        yourListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Object o = yourListView.getItemAtPosition(position);
+                Intent intentBlock = new Intent(view.getContext(), SearchResultsActivity.class);
+                startActivity(intentBlock);
+            }
+        });
         // Inflate the layout for this fragment
         return rootView;
     }
@@ -92,6 +84,7 @@ public class FindAnItem extends Fragment {
 
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
+
             View v=((Activity)getContext()).getLayoutInflater().inflate(R.layout.list_item,null);
             TextView txt1 = (TextView) v.findViewById(R.id.textView);
             txt1.setText(getResources().getStringArray(R.array.Furniture)[position]);
