@@ -23,8 +23,7 @@ import java.util.List;
 import java.util.Locale;
 
 public class PostAnItem extends Fragment {
-    private EditText etDob;
-    private Calendar myCalendar;
+
 
     String[] mimeTypes = {"image/jpeg","image/png"};
     public void PostAnItem() {
@@ -55,30 +54,7 @@ public class PostAnItem extends Fragment {
             }
         });
 
-        myCalendar=Calendar.getInstance();
-        final DatePickerDialog.OnDateSetListener date=new DatePickerDialog.OnDateSetListener() {
-            @Override
-            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-                myCalendar.set(Calendar.YEAR,year);
-                myCalendar.set(Calendar.MONTH,month);
-                myCalendar.set(Calendar.DAY_OF_MONTH,dayOfMonth);
-                updateLabel();
-            }
-        };
-        etDob=(EditText)rootView.findViewById(R.id.etduration);
-        etDob.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                new DatePickerDialog(getContext(),date,myCalendar.get(Calendar.YEAR),myCalendar.get(Calendar.MONTH),myCalendar.get(Calendar.DAY_OF_MONTH)).show();
-
-            }
-        });
 
         return rootView;
-    }
-    private void updateLabel(){
-        String myFormat="dd/MM/yyyy";
-        SimpleDateFormat sdf=new SimpleDateFormat(myFormat, Locale.US);
-        etDob.setText(sdf.format(myCalendar.getTime()));
     }
 }
