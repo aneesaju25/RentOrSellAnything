@@ -2,9 +2,11 @@ package com.example.rentorsellanything;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -31,10 +33,9 @@ public class RegistrationActivity extends AppCompatActivity {
         @NonNull
         final EditText etusername = findViewById(R.id.etregister_username);
         final EditText etpassword = findViewById(R.id.etregister_password);
-        EditText etName = findViewById(R.id.etregister_name);
-        EditText etEmail = findViewById(R.id.etregister_email);
-        EditText etMobile = findViewById(R.id.etregister_mobileNumber);
-        EditText etAddress = findViewById(R.id.etregister_address);
+        final EditText etEmail = findViewById(R.id.etregister_email);
+        final EditText etMobile = findViewById(R.id.etregister_mobileNumber);
+        final EditText etAddress = findViewById(R.id.etregister_address);
 
         Button btn = findViewById(R.id.signup);
         btn.setOnClickListener(new View.OnClickListener() {
@@ -43,10 +44,16 @@ public class RegistrationActivity extends AppCompatActivity {
 
                 String username = etusername.getText().toString();
                 String password = etpassword.getText().toString();
+                String email = etEmail.getText().toString();
+                String mobile = etMobile.getText().toString();
+                String address = etAddress.getText().toString();
 
                 RegisterRequest registerRequest = new RegisterRequest();
-                registerRequest.setuName(username);
-                registerRequest.setuPassword(password);
+                registerRequest.setU_Name(username);
+                registerRequest.setU_password(password);
+                registerRequest.setU_email_id(email);
+                registerRequest.setMob_no(mobile);
+                registerRequest.setAddress(address);
 
                 Retrofit retrofit = new Retrofit.Builder()
                         .baseUrl("http://192.168.40.35/rentsell/")
@@ -58,13 +65,19 @@ public class RegistrationActivity extends AppCompatActivity {
                 Call<RegisterResponse> registerResponse = service.register(registerRequest);
                 registerResponse.enqueue(new Callback<RegisterResponse>() {
                     @Override
-                    public void onResponse(Call<RegisterResponse> call, Response<RegisterResponse> response) {
+                    public void onResponse(@NonNull Call<RegisterResponse> call,@NonNull Response<RegisterResponse> response) {
 
+                        if (response.body() != null && response.body().getStatus()) {
+                            Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+                            startActivity(intent);
+                        }
                     }
 
                     @Override
-                    public void onFailure(Call<RegisterResponse> call, Throwable t) {
+                    public void onFailure(@NonNull Call<RegisterResponse> call, Throwable t) {
 
+                        Log.e("RegisterActivity", t.getMessage().toString());
+                        Toast.makeText(getApplicationContext(), "API Call Failure", Toast.LENGTH_LONG).show();
                     }
                 });
 

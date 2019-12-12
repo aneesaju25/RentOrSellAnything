@@ -2,15 +2,15 @@ package com.example.rentorsellanything.pojo;
 
 public class RegisterResponse {
 
-    private boolean status;
+    private Boolean status;
     private String message;
-    private int uid;
+    private Integer uid;
 
-    public boolean isStatus() {
+    public Boolean getStatus() {
         return status;
     }
 
-    public void setStatus(boolean status) {
+    public void setStatus(Boolean status) {
         this.status = status;
     }
 
@@ -22,14 +22,12 @@ public class RegisterResponse {
         this.message = message;
     }
 
-    public int getUid() {
+    public Integer getUid() {
         return uid;
     }
 
-    public void setUid(int uid) {
+    public void setUid(Integer uid) {
         this.uid = uid;
     }
-
-
 
 }
