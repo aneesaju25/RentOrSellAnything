@@ -27,26 +27,152 @@
         </LinearLayout>
 
         <TextView
+            android:id="@+id/tvEditProfile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="* Edit My Profile"
             android:layout_marginTop="20dp" />
 
         <TextView
+            android:id="@+id/tvMyPosts"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="* My Posts"
             android:layout_marginTop="20dp" />
         <TextView
+            android:id="@+id/tvWishlist"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="* Wishlist"
             android:layout_marginTop="20dp" />
         <TextView
+            android:id="@+id/tvLogout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="* LogOut"
             android:layout_marginTop="20dp"
             android:onClick="processLogoutClick"/>
+    <LinearLayout
+        android:id="@+id/editProfile"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="30dp"
+        android:background="@color/colorLight"
+        android:visibility="gone"
+        android:padding="20dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/activity_register_label_email" />
+
+            <EditText
+                android:id="@+id/etregister_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/activity_register_label_username" />
+
+            <EditText
+                android:id="@+id/etregister_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/activity_register_label_password" />
+
+            <EditText
+                android:id="@+id/etregister_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/activity_register_label_cpassword" />
+
+            <EditText
+                android:id="@+id/etregister_cpassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/activity_register_label_mobileNumber" />
+
+            <EditText
+                android:id="@+id/etregister_mobileNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/activity_register_label_address" />
+
+            <EditText
+                android:id="@+id/etregister_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"/>
+
+        </LinearLayout>
+        <Button
+            android:id="@+id/signup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:text="@string/activity_myProfile_button_update"
+            android:layout_gravity="center" />
+    </LinearLayout>
+
 
 </LinearLayout>

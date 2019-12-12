@@ -42,6 +42,8 @@
 
     <string name="activity_searchResults_label_search">Search Results</string>
 
+    <string name="activity_myProfile_button_update">Update</string>
+
     <string-array name="Vehicles">
         <item>Cars</item>
         <item>Bikes</item>
