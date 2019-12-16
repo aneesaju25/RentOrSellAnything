@@ -80,9 +80,6 @@ public class RegistrationActivity extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(), "API Call Failure", Toast.LENGTH_LONG).show();
                     }
                 });
-
-                Intent intent = new Intent(getApplicationContext(),HomeActivity.class);
-                startActivity(intent);
             }
         });
     }
