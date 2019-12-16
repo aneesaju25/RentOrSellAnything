@@ -6,4 +6,7 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="coloricon">#0696B3</color>
     <color name="colorLight">#fcea9f</color>
+    <color name="colorRed">#f20f29</color>
+    <color name="colorLightYellow">#d4d9ce</color>
+    <color name="colordark">#656878</color>
 </resources>

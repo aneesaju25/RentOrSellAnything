@@ -20,11 +20,12 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Objects;
 
 public class FindAnItem extends Fragment {
-
+    String[] sub_category;
 
     public void FindAnItem() {
         // Required empty public constructor
@@ -48,6 +49,7 @@ public class FindAnItem extends Fragment {
             @Override
             public void onClick(View v) {
                 yourListView.setAdapter(new PasswordAdapter(getActivity(),R.layout.list_item,getResources().getStringArray(R.array.Vehicles)));
+                sub_category = getResources().getStringArray(R.array.Vehicles);
             }
         });
         Button imageButton1 = (Button)rootView.findViewById(R.id.FashionButton);
@@ -55,6 +57,7 @@ public class FindAnItem extends Fragment {
             @Override
             public void onClick(View v1) {
                 yourListView.setAdapter(new PasswordAdapter(getActivity(),R.layout.list_item,getResources().getStringArray(R.array.Fashion)));
+                sub_category = getResources().getStringArray(R.array.Fashion);
             }
         });
         Button imageButton2 = (Button)rootView.findViewById(R.id.HomeButton);
@@ -62,6 +65,7 @@ public class FindAnItem extends Fragment {
             @Override
             public void onClick(View v2) {
                 yourListView.setAdapter(new PasswordAdapter(getActivity(),R.layout.list_item,getResources().getStringArray(R.array.Furniture)));
+                sub_category = getResources().getStringArray(R.array.Furniture);
             }
         });
 
@@ -87,7 +91,7 @@ public class FindAnItem extends Fragment {
 
             View v=((Activity)getContext()).getLayoutInflater().inflate(R.layout.list_item,null);
             TextView txt1 = (TextView) v.findViewById(R.id.textView);
-            txt1.setText(getResources().getStringArray(R.array.Furniture)[position]);
+            txt1.setText((sub_category)[position]);
 
             return v;
         }

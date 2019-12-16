@@ -9,9 +9,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class LoginActivity extends AppCompatActivity {
 
-    //single line comment
-    /* multi line comment
-    multi line comment */
     public void onCreate(@Nullable Bundle x) {
         super.onCreate(x);
         setContentView(R.layout.activity_login);

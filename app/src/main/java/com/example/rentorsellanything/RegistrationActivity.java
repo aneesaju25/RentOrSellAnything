@@ -61,13 +61,13 @@ public class RegistrationActivity extends AppCompatActivity {
                         .build();
 
                 APIService service = retrofit.create(APIService.class);
-                Call<RegisterResponse> registerResponse = service.register(registerRequest);
-                registerResponse.enqueue(new Callback<RegisterResponse>() {
+                Call<RegisterResponse> call = service.register(registerRequest);
+                call.enqueue(new Callback<RegisterResponse>() {
                     @Override
-                    public void onResponse(@NonNull Call<RegisterResponse> call,@NonNull Response<RegisterResponse> response) {
+                    public void onResponse(Call<RegisterResponse> call, Response<RegisterResponse> response) {
 
                         if (response.body() != null && response.body().getStatus()) {
-                            Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+                            Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
                             startActivity(intent);
                             finish();
                         }
@@ -77,7 +77,7 @@ public class RegistrationActivity extends AppCompatActivity {
                     public void onFailure(@NonNull Call<RegisterResponse> call, Throwable t) {
 
                         Log.e("RegisterActivity", t.getMessage().toString());
-                        Toast.makeText(getApplicationContext(), "API Call Failure", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(), "API Call Failure"+t.getMessage(), Toast.LENGTH_LONG).show();
                     }
                 });
             }
