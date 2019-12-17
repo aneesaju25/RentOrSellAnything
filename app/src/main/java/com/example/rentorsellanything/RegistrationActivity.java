@@ -37,7 +37,7 @@ public class RegistrationActivity extends AppCompatActivity {
         final EditText etMobile = findViewById(R.id.etregister_mobileNumber);
         final EditText etAddress = findViewById(R.id.etregister_address);
 
-        Button btn = findViewById(R.id.signup);
+        Button btn = findViewById(R.id.activity_reg_btn_signup);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -56,7 +56,7 @@ public class RegistrationActivity extends AppCompatActivity {
                 registerRequest.setAddress(address);
 
                 Retrofit retrofit = new Retrofit.Builder()
-                        .baseUrl("http://192.168.40.35/rentsell/")
+                        .baseUrl("http://backtowork.icfoss.qleapbs.com/rentsell/")
                         .addConverterFactory(GsonConverterFactory.create())
                         .build();
 
@@ -67,6 +67,7 @@ public class RegistrationActivity extends AppCompatActivity {
                     public void onResponse(Call<RegisterResponse> call, Response<RegisterResponse> response) {
 
                         if (response.body() != null && response.body().getStatus()) {
+                            Toast.makeText(getApplicationContext(), "Successfully registered", Toast.LENGTH_LONG).show();
                             Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
                             startActivity(intent);
                             finish();
@@ -86,11 +87,6 @@ public class RegistrationActivity extends AppCompatActivity {
     public void processSigninLinkClick(View view)
     {
         Intent intent= new Intent(this, LoginActivity.class);
-        startActivity(intent);
-    }
-    public void processSignupBtnClick(View view)
-    {
-        Intent intent= new Intent(this, HomeActivity.class);
         startActivity(intent);
     }
 }

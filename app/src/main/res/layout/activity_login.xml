@@ -37,7 +37,7 @@
         android:paddingTop="15dp"
         android:paddingBottom="15dp"
         android:text="@string/activity_login_button_login"
-        android:onClick="processSigninLinkClick"/>
+        android:onClick="processSigninBtnClick"/>
 
     <LinearLayout
         android:layout_width="match_parent"

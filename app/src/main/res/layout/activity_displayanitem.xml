@@ -89,11 +89,12 @@
         android:layout_alignParentBottom="true"
         android:background="@color/coloricon">
         <TextView
+            android:id="@+id/tv_call_user"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="30sp"
             android:text="Call"
-            android:layout_marginStart="20dp"/>
+            android:layout_marginStart="20dp" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

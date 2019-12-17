@@ -16,6 +16,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -86,7 +87,7 @@ public class FindAnItem extends Fragment {
             super(context, resource, objects);
         }
 
-        @Override
+        @Override @NonNull
         public View getView(int position, View convertView, ViewGroup parent) {
 
             View v=((Activity)getContext()).getLayoutInflater().inflate(R.layout.list_item,null);

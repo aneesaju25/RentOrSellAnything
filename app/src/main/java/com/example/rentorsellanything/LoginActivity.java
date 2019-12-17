@@ -18,7 +18,7 @@ public class LoginActivity extends AppCompatActivity {
         Intent intent= new Intent(this, RegistrationActivity.class);
         startActivity(intent);
     }
-    public void processSigninLinkClick(View view)
+    public void processSigninBtnClick(View view)
     {
         Intent intent= new Intent(this, HomeActivity.class);
         startActivity(intent);
