@@ -39,7 +39,7 @@ public class DisplayAnItemActivity extends AppCompatActivity {
         messageUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("sms:" + 1234));
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("sms:" + 9797473));
                 intent.putExtra("sms_body", "");
                 startActivity(intent);
             }
