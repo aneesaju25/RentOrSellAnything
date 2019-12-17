@@ -52,7 +52,7 @@ public class LoginActivity extends AppCompatActivity {
                         .build();
 
                 APIService service = retrofit.create(APIService.class);
-               /* Call<LoginResponse> call = service.login(loginRequest);
+                Call<LoginResponse> call = service.login(loginRequest);
                 call.enqueue(new Callback<LoginResponse>() {
                     @Override
                     public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
@@ -71,9 +71,7 @@ public class LoginActivity extends AppCompatActivity {
                         Log.e("LoginActivity", t.getMessage().toString());
                         Toast.makeText(getApplicationContext(), "API Call Failure"+t.getMessage(), Toast.LENGTH_LONG).show();
                     }
-                });*/
-                Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
-                startActivity(intent);
+                });
             }
         });
     }
