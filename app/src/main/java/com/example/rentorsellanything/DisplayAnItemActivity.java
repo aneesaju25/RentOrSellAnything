@@ -7,9 +7,11 @@ import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -30,6 +32,16 @@ public class DisplayAnItemActivity extends AppCompatActivity {
                 Intent callIntent = new Intent(Intent.ACTION_DIAL);
                 callIntent.setData(Uri.parse("tel:0377778888"));
                 startActivity(callIntent);
+            }
+        });
+
+        TextView messageUser = findViewById(R.id.tv_message_user);
+        messageUser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("sms:" + 1234));
+                intent.putExtra("sms_body", "");
+                startActivity(intent);
             }
         });
 
