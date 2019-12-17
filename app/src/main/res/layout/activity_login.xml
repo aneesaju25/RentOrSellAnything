@@ -12,7 +12,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="70dp"
         android:layout_marginBottom="80dp"
-        android:src="@drawable/ic_business_center_black_24dp"/>
+        android:src="@drawable/ecommerce_icon"/>
 
     <EditText
         android:id="@+id/editText"
