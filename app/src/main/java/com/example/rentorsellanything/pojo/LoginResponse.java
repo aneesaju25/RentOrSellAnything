@@ -1,17 +1,19 @@
 package com.example.rentorsellanything.pojo;
 
+import com.google.gson.annotations.SerializedName;
+
 public class LoginResponse {
 
-    private Integer uid;
     private Boolean status;
     private String message;
+    private Integer UID;
 
     public Integer getUid() {
-        return uid;
+        return UID;
     }
 
     public void setUid(Integer uid) {
-        this.uid = uid;
+        this.UID = uid;
     }
 
     public Boolean getStatus() {

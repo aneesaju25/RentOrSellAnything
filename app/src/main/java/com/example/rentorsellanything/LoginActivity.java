@@ -42,7 +42,7 @@ public class LoginActivity extends AppCompatActivity {
                 String username = etusername.getText().toString();
                 String password = etpassword.getText().toString();
 
-                LoginRequest loginRequest = new LoginRequest();
+                final LoginRequest loginRequest = new LoginRequest();
                 loginRequest.setUsername(username);
                 loginRequest.setPassword(password);
 
@@ -58,7 +58,10 @@ public class LoginActivity extends AppCompatActivity {
                     public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
 
                         if (response.body() != null && response.body().getStatus()) {
-                            Toast.makeText(getApplicationContext(), "Login Successful", Toast.LENGTH_LONG).show();
+
+                            Integer uid = response.body().getUid();
+                            Toast.makeText(getApplicationContext(), "Login Successful ", Toast.LENGTH_LONG).show();
+
                             Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
                             startActivity(intent);
                             finish();
