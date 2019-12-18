@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 public class ImageAdapter extends BaseAdapter {
     private Context mContext;
-    String[] category = {"Honda","Mobile"};
+    String[] category = {"Honda","Maruti"};
 
     public ImageAdapter(Context c) {
         mContext = c;
@@ -49,7 +49,7 @@ public class ImageAdapter extends BaseAdapter {
     }
     // Add all our images to arraylist
     public Integer[] thumbImages = {
-            R.drawable.honda, R.drawable.splash_image
+            R.drawable.honda, R.drawable.maruti
 
     };
 }
