@@ -45,6 +45,14 @@ public class DisplayAnItemActivity extends AppCompatActivity {
             }
         });
 
+        final Button btnwishlist = findViewById(R.id.btnWishlist);
+        btnwishlist.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                btnwishlist.setCompoundDrawablesWithIntrinsicBounds( R.drawable.ic_favorite_red_24dp, 0, 0, 0);
+            }
+        });
+
     }
     public void processUserProfileClick(View view)
     {
