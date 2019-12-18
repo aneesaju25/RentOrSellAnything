@@ -18,15 +18,29 @@ public class MyActivity extends AppCompatActivity {
 
         TextView myPosts = findViewById(R.id.tvShowMyPosts);
         final GridView view = findViewById(R.id.gridviewMyPosts);
+        TextView myWishlist = findViewById(R.id.tvShowMyWishlist);
+        final GridView view1 = findViewById(R.id.gridviewMyWishlist);
+
         myPosts.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                view1.setVisibility(View.GONE);
                 view.setVisibility(View.VISIBLE);
             }
         });
 
-        GridView gridview = (GridView) findViewById(R.id.gridviewMyPosts);
-        gridview.setAdapter(new ImageAdapter(this));
+        view.setAdapter(new ImageAdapter(this));
+
+
+        myWishlist.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                view.setVisibility(View.GONE);
+                view1.setVisibility(View.VISIBLE);
+            }
+        });
+
+        view1.setAdapter(new ImageAdapter(this));
     }
     public void processHomeBtnClick(View view)
     {

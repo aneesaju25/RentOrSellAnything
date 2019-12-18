@@ -21,17 +21,23 @@
 
     <TextView
         android:id="@+id/tvShowMyPosts"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="My Posts"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:background="@color/colorLight"
+        android:layout_marginTop="5dp"
+        android:textAlignment="center"/>
 
     <TextView
         android:id="@+id/tvShowMyWishlist"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Wishlist"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:background="@color/colorLight"
+        android:layout_marginTop="5dp"
+        android:textAlignment="center"/>
     <GridView
         android:id="@+id/gridviewMyPosts"
         android:layout_width="fill_parent"
@@ -42,5 +48,18 @@
         android:horizontalSpacing="10dp"
         android:stretchMode="columnWidth"
         android:gravity="center"
-        android:visibility="gone" />
+        android:visibility="gone"
+        android:background="@color/colorLightYellow"/>
+    <GridView
+        android:id="@+id/gridviewMyWishlist"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:columnWidth="90dp"
+        android:numColumns="auto_fit"
+        android:verticalSpacing="10dp"
+        android:horizontalSpacing="10dp"
+        android:stretchMode="columnWidth"
+        android:gravity="center"
+        android:visibility="gone"
+        android:background="@color/cardview_light_background"/>
 </LinearLayout>
