@@ -1,55 +1,54 @@
 package com.example.rentorsellanything;
 
 import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class ImageAdapter extends BaseAdapter {
     private Context mContext;
+    String[] category = {"Honda","Mobile"};
 
-    // Constructor
     public ImageAdapter(Context c) {
         mContext = c;
     }
-
     public int getCount() {
-        return mThumbIds.length;
+        return thumbImages.length;
     }
-
     public Object getItem(int position) {
         return null;
     }
-
     public long getItemId(int position) {
         return 0;
     }
-
     // create a new ImageView for each item referenced by the Adapter
     public View getView(int position, View convertView, ViewGroup parent) {
-        ImageView imageView;
-        TextView textView;
+
+        View grid;
+        LayoutInflater inflater = (LayoutInflater) mContext
+                .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         if (convertView == null) {
-            imageView = new ImageView(mContext);
-            textView = new TextView(mContext);
-            imageView.setLayoutParams(new GridView.LayoutParams(150, 150));
-            imageView.setScaleType(ImageView.ScaleType.FIT_CENTER);
-            //imageView.setPadding(15, 8, 8, 8);
-        }
-        else
-        {
-            imageView = (ImageView) convertView;
-        }
-        imageView.setImageResource(mThumbIds[position]);
-        return imageView;
-    }
 
-    // Keep all Images in array
-    public Integer[] mThumbIds = {
+            grid = new View(mContext);
+            grid = inflater.inflate(R.layout.grid_data, null);
+            TextView textView = (TextView) grid.findViewById(R.id.grid_item_label);
+            ImageView imageView = (ImageView)grid.findViewById(R.id.grid_item_image);
+            textView.setText(category[position]);
+            imageView.setImageResource(thumbImages[position]);
+        } else {
+            grid = (View) convertView;
+        }
+
+        return grid;
+    }
+    // Add all our images to arraylist
+    public Integer[] thumbImages = {
             R.drawable.honda, R.drawable.splash_image
 
     };
